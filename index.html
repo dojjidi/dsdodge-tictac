@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="/styles/index.scss">
     <head>
       <title>The Greatest Game Ever Played</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,5 +41,21 @@
         <button id="sign-out" class="btn btn-danger">Logout</button>
       </section>
 
+      <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+      </div>
+
+      <div class="winning-message" id="winning-message">
+        <div data-winning-message></div>
+        <button id="restartButton">Restart</button>
+      </div>
     </body>
 </html>
