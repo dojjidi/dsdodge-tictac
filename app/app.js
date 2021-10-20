@@ -3,6 +3,8 @@
 // const authEvents = require('./auth/events')
 // use require without a reference to ensure a file is bundled
 // require('./example')
+
+const authEvents = require('./curl-scripts/auth/events')
 $(() => {
   // Whenever our #sign-up form is submitted, call the `onSignUp` function
   $('#sign-up').on('submit', authEvents.onSignUp)
