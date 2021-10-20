@@ -13,7 +13,7 @@
     </head>
     <body>
 
-      <h1>The Greatest Game Ever Played</h1>
+      <h1>Type Tac Toe</h1>
 
       <!-- sign up form -->
       <section id="before-sign-in">
@@ -22,6 +22,7 @@
           <input type="email" name="credentials[email]" placeholder="Username">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <br>
           <button class="btn btn-primary">Sign Up</button>
         </form>
 
@@ -32,6 +33,7 @@
           <legend>Sign In</legend>
           <input type="email" name="credentials[email]" placeholder="Username">
           <input type="password" name="credentials[password]" placeholder="Password">
+          <br>
           <button class="btn btn-primary">Sign In</button>
         </form>
 
@@ -53,8 +55,8 @@
         <div class="cell" data-cell></div>
       </div>
 
-      <div class="winning-message" id="winning-message">
-        <div data-winning-message></div>
+      <div class="win-declaration" id="win-declaration">
+        <div data-win-declaration-message></div>
         <button id="restartButton">Restart</button>
       </div>
     </body>
