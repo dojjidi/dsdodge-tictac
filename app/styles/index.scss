@@ -44,14 +44,6 @@ body {
      position: relative;
    }
 
-.win-declaration button {
-  font-size: 3rem;
-  background-color: white;
-  border: 1px solid black;
-  padding: .25em .5em;
-  cursor: pointer;
-}
-
 .win-declaration.show {
   display: flex;
 }

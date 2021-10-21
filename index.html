@@ -14,7 +14,7 @@
     <body>
 
       <h1>Type Tac Toe</h1>
-
+      <p id="message"></p>
       <!-- sign up form -->
       <section id="before-sign-in">
         <form id="sign-up" class="border">
@@ -40,10 +40,10 @@
         <br>
 
         <!-- sign out button -->
-        <button id="sign-out after-sign-in" class="btn btn-danger">Logout</button>
+        <button id="sign-out" class="btn btn-danger after-sign-in">Logout</button>
       </section>
 
-      <section>
+      <section class="after-sign-in">
       <div class="board" id="board">
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -57,8 +57,8 @@
       </div>
 
       <div class="win-declaration" id="win-declaration">
-        <div data-win-declaration-message></div>
-        <button id="restartButton">Restart</button>
+        <div win-declaration-message></div>
+        <button class="btn btn-primary" id="restartButton">Restart</button>
       </div>
     </section>
     </body>
