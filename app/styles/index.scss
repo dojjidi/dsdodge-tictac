@@ -5,9 +5,9 @@ body {
    color:black;
  }
 
- #after-sign-in {
-   display: none;
- }
+//  .after-sign-in {
+//    display: none;
+//  }
 
  .spacing {
    padding: 20px;
@@ -35,28 +35,14 @@ body {
    }
 
    .cell {
+     width: var(--cell-size);
+     height: var(--cell-size);
      border: 1.5px solid black;
      display: flex;
      justify-content: center;
      align-items: center;
      position: relative;
-     cursor: pointer;
    }
-
-.win-declaration {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, .9);
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 5rem;
-  flex-direction: column;
-}
 
 .win-declaration button {
   font-size: 3rem;
