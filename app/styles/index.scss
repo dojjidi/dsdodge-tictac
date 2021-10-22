@@ -5,9 +5,9 @@ body {
    color:black;
  }
 
-//  .after-sign-in {
-//    display: none;
-//  }
+ .after-sign-in {
+   display: none;
+ }
 
  .spacing {
    padding: 20px;
@@ -34,6 +34,16 @@ body {
      grid-template-columns: repeat(3, auto)
    }
 
+   .x {
+     background-color: lightcoral;
+     cursor: not-allowed;
+   }
+
+   .circle {
+     background-color: lightblue;
+     cursor: not-allowed;
+   }
+
    .cell {
      width: var(--cell-size);
      height: var(--cell-size);
@@ -42,9 +52,6 @@ body {
      justify-content: center;
      align-items: center;
      position: relative;
+     cursor: pointer;
    }
-
-.win-declaration.show {
-  display: flex;
-}
 
