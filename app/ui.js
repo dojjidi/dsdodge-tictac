@@ -28,8 +28,8 @@ const signInSuccess = function (responseData) {
   $('#response-display').removeClass()
   $('#response-display').addClass('text-success')
   $('form').trigger('reset')
-  $('#before-log').hide()
-  $('#after-log').show()
+  $('#before-sign-in').hide()
+  $('#after-sign-in').show()
 
   console.log('responseData is', responseData)
 }
@@ -46,8 +46,8 @@ const signOutSuccess = function (responseData) {
   $('#response-display').removeClass()
   $('#response-display').addClass('text-success')
   $('form').trigger('reset')
-  $('#after-log').hide()
-  $('#before-log').show()
+  $('#after-sign-in').hide()
+  $('#before-sign-in').show()
   console.log('responseData is', responseData)
 }
 
