@@ -4,10 +4,10 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-const Events = require('./events')
+const authEvents = require('./events.js')
 
 $(() => {
-  $('#sign-up').on('submit', Events.onSignUp)
-  $('#sign-in').on('submit', Events.onSignIn)
-  $('#sign-out').on('click', Events.onSignOut)
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#sign-out').on('click', authEvents.onSignOut)
 })

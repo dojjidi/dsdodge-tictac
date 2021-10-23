@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('../store')
+const store = require('./store')
 
 const signUpSuccess = function (responseData) {
   $('#response-display').text('Signed up successfully')
@@ -28,8 +28,8 @@ const signInSuccess = function (responseData) {
   $('#response-display').removeClass()
   $('#response-display').addClass('text-success')
   $('form').trigger('reset')
-  $('before-sign-in').hide()
-  $('#after-sign-in').show()
+  $('#before-log').hide()
+  $('#after-log').show()
 
   console.log('responseData is', responseData)
 }
@@ -46,8 +46,8 @@ const signOutSuccess = function (responseData) {
   $('#response-display').removeClass()
   $('#response-display').addClass('text-success')
   $('form').trigger('reset')
-  $('#after-sign-in').hide()
-  $('#before-sign-in').show()
+  $('#after-log').hide()
+  $('#before-log').show()
   console.log('responseData is', responseData)
 }
 

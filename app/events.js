@@ -1,9 +1,9 @@
 'use strict'
 
 // const { CleanPlugin } = require('webpack')
-const getFormFields = require('./lib/get-form-fields')
-const api = require('./curl-scripts/auth/api')
-const ui = require('./curl-scripts/auth/ui')
+const getFormFields = require('../lib/get-form-fields')
+const api = require('./api')
+const ui = require('./ui')
 
 // user must be able to sign up
 const onSignUp = function (e) {
@@ -11,7 +11,7 @@ const onSignUp = function (e) {
   const form = e.target
   const formData = getFormFields(form)
   api.signUp(formData)
-    .then(ui.SignUpSuccess)
+    .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
 
