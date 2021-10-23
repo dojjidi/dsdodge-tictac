@@ -15,7 +15,7 @@
 
       <h1>Type Tac Toe</h1>
       <!-- sign up form -->
-      <section id="before-sign-in">
+      <section class="before-log">
         <form id="sign-up" class="border">
           <legend>Sign Up</legend>
           <input type="email" name="credentials[email]" placeholder="Username">
@@ -37,19 +37,18 @@
         </form>
 
         <br>
-
+        
       </section>
-      <section id="after-sign-in">
-        <!-- sign out button -->
-        <button id="sign-out" class="btn btn-danger after-sign-in">Logout</button>
-
 
       <section>
         <div id="error-message"></div>
         <div id="response-display"></div>
       </section>
 
-      <section class="after-sign-in">
+      <section class="after-log">
+        <!-- sign out button -->
+        <button id="sign-out" class="btn btn-danger">Logout</button>
+
       <div class="board" id="board">
         <div class="cell" data-cell-index="0"></div>
         <div class="cell" data-cell-index="1"></div>
@@ -67,8 +66,6 @@
         <button class="btn btn-primary" id="restartButton">Restart</button>
       </div>
 
-    </section>
-    
     </section>
     </body>
 </html>
