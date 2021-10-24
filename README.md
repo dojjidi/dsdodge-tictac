@@ -1,5 +1,8 @@
 # Type Tac Toe
 
+# Deployment Link
+https://dojjidi.github.io/dsdodge-tictac-project-client/
+
 ## What is it? 
 Type Tac Toe is a tic tac toe game that I started with the intention of reducing eye-strain while playing, inspired by monkeytype.com
 You're looking at the logic and structure of the app, and can expect more updates soon.
