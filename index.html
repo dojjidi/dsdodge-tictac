@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Type Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+
+      <h1>Type Tac Toe</h1>
+
+      <section id="before-sign-in">
+        <form id="sign-up" class="border">
+          <legend>Sign Up</legend>
+          <input type="email" name="credentials[email]" placeholder="Username">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <br>
+          <button class="btn btn-primary">Sign Up</button>
+        </form>
+
+        <br>
+
+        <form id="sign-in" class="border">
+          <legend>Sign In</legend>
+          <input type="email" name="credentials[email]" placeholder="Username">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <br>
+          <button class="btn btn-primary">Sign In</button>
+        </form>
+
+        <br>
+
+      </section>
+
+      <section>
+        <div id="error-message"></div>
+        <div id="response-display"></div>
+      </section>
+
+      <section id="after-sign-in">
+
+        <button id="sign-out" class="btn btn-danger">Logout</button>
+        <button id="start-button" class="btn btn-primary start-button">Start Game</button>
+
+        <div class="current-player"></div>
+
+       <section id="after-sign">
+
+        <div class="board no-click" id="board">
+          <div class="cell" data-cell-index="0" id="0"></div>
+          <div class="cell" data-cell-index="1" id="1"></div>
+          <div class="cell" data-cell-index="2" id="2"></div>
+          <div class="cell" data-cell-index="3" id="3"></div>
+          <div class="cell" data-cell-index="4" id="4"></div>
+          <div class="cell" data-cell-index="5" id="5"></div>
+          <div class="cell" data-cell-index="6" id="6"></div>
+          <div class="cell" data-cell-index="7" id="7"></div>
+          <div class="cell" data-cell-index="8" id="8"></div>
+        </div>
+
+        <div class="win-message" id="win-declaration">
+          <div id="win-declaration-message"></div>
+          <button class="btn btn-primary restart-button" id="restart-button">Restart</button>
+        </div>
+
+       </section>
+
+      </section>
+    </body>
+</html>
