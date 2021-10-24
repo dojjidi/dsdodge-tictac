@@ -1,22 +1,7 @@
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-// const authEvents = require('./auth/events')
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
 const authEvents = require('./events.js')
 let currentPlayer = '✕'
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 let turnCount = 0
-// const winCons = [
-//   [0, 1, 2],
-//   [3, 4, 5],
-//   [6, 7, 8],
-//   [0, 3, 6],
-//   [1, 4, 7],
-//   [0, 4, 8],
-//   [2, 4, 6]
-// ]
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -25,18 +10,9 @@ $(() => {
 })
 
 $(() => {
-  // Start the player at X
-
-  // win / tie function
-
-  // Our box click event handler
-
-  // Select all of the boxes, $('.box'), add an event listener so that `on`
-  // every 'click' the `onBoxClick` event handler is called.
   $('.cell').on('click', onCellClick)
 })
 
-// start game function
 $(() => {
   const startGame = () => {
     console.log('game start')
@@ -53,7 +29,6 @@ $(() => {
 })
 
 $(() => {
-  // restart function
   const restartGame = () => {
     console.log('restart game')
     $('.cell').text('')
