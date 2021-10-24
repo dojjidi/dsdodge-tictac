@@ -1,5 +1,5 @@
 const authEvents = require('./events.js')
-let currentPlayer = '✕'
+let currentPlayer = 'X'
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 let turnCount = 0
 
@@ -11,6 +11,8 @@ $(() => {
 
 $(() => {
   $('.cell').on('click', onCellClick)
+  $('.current-player').text(currentPlayer)
+  console.log('X')
 })
 
 $(() => {
@@ -23,6 +25,7 @@ $(() => {
     gameBoard = ['', '', '', '', '', '', '', '', '']
     currentPlayer = 'X'
     turnCount = 0
+    $('.current-player').text(currentPlayer)
   }
 
   $('.start-button').on('click', startGame)
@@ -38,6 +41,7 @@ $(() => {
     gameBoard = ['', '', '', '', '', '', '', '', '']
     currentPlayer = 'X'
     turnCount = 0
+    $('.current-player').text(currentPlayer)
   }
   $('.restart-button').on('click', restartGame)
 })
@@ -52,7 +56,8 @@ const onCellClick = (event) => {
   turnCount++
   console.log(turnCount)
   checkWin()
-  currentPlayer = currentPlayer === 'O' ? '✕' : 'O'
+  currentPlayer = currentPlayer === 'O' ? 'X' : 'O'
+  $('.current-player').text(currentPlayer)
 }
 
 function checkWin () {
