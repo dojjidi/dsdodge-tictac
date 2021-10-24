@@ -5,6 +5,18 @@
 // require('./example')
 
 const authEvents = require('./events.js')
+let currentPlayer = '✕'
+let gameBoard = ['', '', '', '', '', '', '', '', '']
+let turnCount = 0
+// const winCons = [
+//   [0, 1, 2],
+//   [3, 4, 5],
+//   [6, 7, 8],
+//   [0, 3, 6],
+//   [1, 4, 7],
+//   [0, 4, 8],
+//   [2, 4, 6]
+// ]
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -14,32 +26,92 @@ $(() => {
 
 $(() => {
   // Start the player at X
-  let currentPlayer = '✕'
+
+  // win / tie function
 
   // Our box click event handler
-  const onCellClick = (event) => {
-    console.log('click')
-
-    // Select the box that was clicked, event.target
-    const cell = $(event.target)
-
-    // Set the boxs background to `transparent`
-    // So we can see the image behind the box.
-    // Then set the text to the current player
-    cell.css('background', 'transparent').text(currentPlayer).addClass('no-click')
-
-    // Change the current player
-    currentPlayer = currentPlayer === 'O' ? '✕' : 'O'
-  }
-
-  // const onCellHover = (event) => {
-  //   const cell = $(event.target)
-  //   cell.hasClass('no-click') ? cell.css('cursor', 'not-allowed') : cell.css('cursor', 'pointer')
-  // }
 
   // Select all of the boxes, $('.box'), add an event listener so that `on`
   // every 'click' the `onBoxClick` event handler is called.
   $('.cell').on('click', onCellClick)
-  // $('.cell').on('mouseover', onCellHover)
-  // $('.cell').on('mouseout', onCellLeave)
 })
+
+// start game function
+$(() => {
+  const startGame = () => {
+    console.log('game start')
+    $('.cell').text('')
+    $('.cell').removeClass('no-click')
+    $('.board').removeClass('no-click')
+    $('#win-declaration-message').text('').removeClass('text-success')
+    gameBoard = ['', '', '', '', '', '', '', '', '']
+    currentPlayer = 'X'
+    turnCount = 0
+  }
+
+  $('.start-button').on('click', startGame)
+})
+
+$(() => {
+  // restart function
+  const restartGame = () => {
+    console.log('restart game')
+    $('.cell').text('')
+    $('.cell').removeClass('no-click')
+    $('.board').removeClass('no-click')
+    $('#win-declaration-message').text('').removeClass('text-success')
+    gameBoard = ['', '', '', '', '', '', '', '', '']
+    currentPlayer = 'X'
+    turnCount = 0
+  }
+  $('.restart-button').on('click', restartGame)
+})
+
+const onCellClick = (event) => {
+  console.log('click')
+  console.log(event)
+  gameBoard[event.target.id] = currentPlayer
+  console.log(gameBoard)
+  const cell = $(event.target)
+  cell.css('background', 'transparent').text(currentPlayer).addClass('no-click')
+  turnCount++
+  console.log(turnCount)
+  checkWin()
+  currentPlayer = currentPlayer === 'O' ? '✕' : 'O'
+}
+
+function checkWin () {
+  if (currentPlayer === gameBoard[0] && currentPlayer === gameBoard[1] && currentPlayer === gameBoard[2]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (currentPlayer === gameBoard[3] && currentPlayer === gameBoard[4] && currentPlayer === gameBoard[5]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (currentPlayer === gameBoard[6] && currentPlayer === gameBoard[7] && currentPlayer === gameBoard[8]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (currentPlayer === gameBoard[0] && currentPlayer === gameBoard[3] && currentPlayer === gameBoard[6]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (currentPlayer === gameBoard[1] && currentPlayer === gameBoard[4] && currentPlayer === gameBoard[7]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (currentPlayer === gameBoard[0] && currentPlayer === gameBoard[4] && currentPlayer === gameBoard[8]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (currentPlayer === gameBoard[2] && currentPlayer === gameBoard[4] && currentPlayer === gameBoard[6]) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text(`${currentPlayer} has won`).addClass('text-success')
+  } else if (turnCount === 9) {
+    console.log(`${currentPlayer} has won`)
+    $('#board').addClass('no-click')
+    $('#win-declaration-message').text("It's a draw!")
+  }
+}

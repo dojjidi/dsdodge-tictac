@@ -23,14 +23,13 @@ const signUpFailure = function (error) {
 const signInSuccess = function (responseData) {
   store.user = responseData.user
   console.log('store is', store)
-
   $('#response-display').text('Signed in successfully')
   $('#response-display').removeClass()
   $('#response-display').addClass('text-success')
   $('form').trigger('reset')
   $('#before-sign-in').hide()
   $('#after-sign-in').show()
-
+  $('#after-start').hide()
   console.log('responseData is', responseData)
 }
 

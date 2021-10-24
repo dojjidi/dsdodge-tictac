@@ -10,7 +10,6 @@ body {
 }
 
 .no-click {
-  // cursor: not-allowed;
   pointer-events: none;
 }
 
@@ -38,16 +37,6 @@ body {
      align-content: center;
      grid-template-columns: repeat(3, auto)
    }
-
-  //  .x {
-  //    background-color: lightcoral;
-  //    cursor: not-allowed;
-  //  }
-
-  //  .circle {
-  //    background-color: lightblue;
-  //    cursor: not-allowed;
-  //  }
 
    .cell {
      width: var(--cell-size);
